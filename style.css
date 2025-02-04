@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: none;
+    position: relative;
+    color: white;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('background.jpg') no-repeat center center/cover;
+    filter: blur(2px); /* Efek blur hanya pada background */
+    z-index: -1; /* Background berada di belakang konten utama */
+    opacity: 0.8;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.7); /* Transparan hitam untuk kontainer */
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 420px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+.profile {
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px cyan;
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: 600;
+    text-shadow: 0 0 10px cyan;
+}
+
+p {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px cyan;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.link.whatsapp {
+    background: linear-gradient(90deg, #25D366, #128C7E);
+    box-shadow: 0 0 10px #25D366;
+}
+
+.link.tiktok {
+    background: linear-gradient(90deg, #EE1D52, #69C9D0);
+    box-shadow: 0 0 10px #EE1D52;
+}
+
+.link.yamaha {
+    background: linear-gradient(90deg, #0044cc, #001a66);
+    box-shadow: 0 0 10px #0044cc;
+}
+
+.link:hover {
+    box-shadow: 0 0 20px white;
+    transform: scale(1.05);
+}
+
+/* Tambahan untuk alamat */
+.address {
+    background: rgba(255, 255, 255, 0.1); /* Latar belakang transparan */
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    text-shadow: 0 0 5px cyan;
+    font-size: 16px;
+    font-style: italic;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.address p {
+    margin: 0;
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* Modal */
+.modal {
+    display: none; /* Tidak ditampilkan secara default */
+    position: fixed;
+    z-index: 1000; /* Di atas semua elemen lainnya */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Latar belakang hitam transparan */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px white;
+    animation: zoomIn 0.3s ease-in-out;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: red;
+}
+
+/* Animasi zoom */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cahyadi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <!-- Profil yang bisa diklik untuk membesar -->
+            <img src="profile.jpg" alt="Foto Profil" class="profile-pic" onclick="openModal()">
+            <h1>Cahyadi</h1>
+            <div class="address">
+                <p>Jalan A.P. Pettarani Nomor.18, Kota Makassar</p>
+            </div>
+        </div>
+
+        <div class="links">
+            <a href="https://wa.me/6281312161726" target="_blank" class="link whatsapp">WhatsApp</a>
+            <a href="https://www.tiktok.com/@sentral.yamaha.mks?_t=ZS-8tXkVam6DaL&_r=1" target="_blank" class="link tiktok">TikTok</a>
+            <a href="https://motor123.id/yamaha-makassar" target="_blank" class="link yamaha">Yamaha</a>
+        </div>
+    </div>
+
+    <!-- Modal untuk gambar -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
